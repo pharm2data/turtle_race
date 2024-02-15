@@ -1,0 +1,15 @@
+def number_of_turtles():
+    turtles = 0
+    while True:
+        turtles = input('Please enter the number of turtles (2 - 10): ')
+        if turtles.isdigit():
+            turtles = int(turtles)
+        else: 
+            print("Number of turtles is invalid. Plese try again!")
+            continue
+        
+        if 2 <= turtles <= 10:
+            return turtles
+        else: 
+            print('Number not in range 2-10. Please try again!')
+
