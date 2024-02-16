@@ -2,10 +2,6 @@ import turtle
 
 WIDTH, HEIGHT = 550, 550
 
-screen = turtle.Screen()
-screen.setup(WIDTH, HEIGHT)
-screen.title('Turtle Racing Game!')
-
 def number_of_turtles():
     turtles = 0
     while True:
@@ -21,4 +17,12 @@ def number_of_turtles():
         else: 
             print('Number not in range 2-10. Please try again!')
 
+
+def init_turtle():
+    screen = turtle.Screen()
+    screen.setup(WIDTH, HEIGHT)
+    screen.title('Turtle Racing Game!')
+
 turtles = number_of_turtles()
+init_turtle()
+
