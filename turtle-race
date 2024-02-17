@@ -1,4 +1,5 @@
 import turtle
+import time 
 
 WIDTH, HEIGHT = 550, 550
 
@@ -25,4 +26,12 @@ def init_turtle():
 
 turtles = number_of_turtles()
 init_turtle()
+turtle = turtle.Turtle()
+turtle.speed(4)
+turtle.foward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.right(90)
+turtle.backward(100)
+time.sleep(30)
 
