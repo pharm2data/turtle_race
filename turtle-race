@@ -1,7 +1,9 @@
 import turtle
 import time 
+import random
 
 WIDTH, HEIGHT = 550, 550
+COLORS = ['red' , 'orange' , 'yellow' , 'green', 'blue', 'purple' , 'pink' , 'brown' , 'black' , 'cyan']
 
 def number_of_turtles():
     turtles = 0
@@ -18,35 +20,24 @@ def number_of_turtles():
         else: 
             print('Number not in range 2-10. Please try again!')
 
+def create_turtles(colors):
+    turtles = []
+    for i, color in enumerate(colors):
+        racer = turtle.Turtle()
+        racer.color(color)
+        racer.shape('turtle')
+        racer.left(90)
+        racer.penup()
+        racer.pendown()
+        turtles.append(racer)
 
 def init_turtle():
     screen = turtle.Screen()
     screen.setup(WIDTH, HEIGHT)
     screen.title('Turtle Racing Game!')
 
-turtles = number_of_turtles()
+racers = number_of_turtles()
 init_turtle()
 
-turtle = turtle.Turtle()
-turtle.speed(4)
-turtle.penup()
-turtle.shape('turtle')
-turtle.color('pink')
-turtle.foward(100)
-turtle.left(90)
-turtle.pendown()
-turtle.forward(100)
-turtle.right(90)
-turtle.backward(100)
-
-turtle2 = turtle.Turtle()
-turtle2.speed(8)
-turtle2.penup()
-turtle2.shape('turtle')
-turtle2.color('blue')
-turtle2.foward(90)
-turtle2.left(100)
-turtle2.pendown()
-turtle2.forward(80)
-turtle2.right(65)
-turtle2.backward(90)
+random.shuffle(COLORS)
+colors = COLORS[:racers]
